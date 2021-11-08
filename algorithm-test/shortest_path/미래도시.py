@@ -37,7 +37,11 @@ distance = [INF] * (n+1)
 dijkstra(k)
 total_dist+=distance[x]
 
-print(total_dist)
+if total_dist<INF:
+  print(total_dist)
+else:
+  print(-1)
+
 
 
     
