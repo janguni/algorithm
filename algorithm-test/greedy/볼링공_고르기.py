@@ -1,22 +1,15 @@
 n, m = map(int, input().split())
-arr = [0 for i in range(1,11)]
+arr = [0] *11
 
 num=list(map(int,input().split()))
 
-for n in num:
-  arr[n]+=1
+for x in num:
+  arr[x]+=1
 
 result=0
-for i in range(1,m):
-  if i!=0:
-    sum=0
-  else: continue
-
-  for j in range(i+1,m+1):
-    if j!=0:
-      sum+=(arr[j]*arr[i])
-  result+=sum
-
+for i in range(1,m+1):
+ n-=arr[i]
+ result += arr[i]*n
 
 print(result)
       
