@@ -7,11 +7,11 @@ def first(arr,target,start,end):
 
   mid = (start + end) //2
 
-  #target인 숫자들 중 가장 왼쪽인 인덱스 반환
+  # target인 숫자들 중 가장 왼쪽인 인덱스 반환
   if target==arr[mid] and (mid==0 or target>arr[mid-1]):
     return mid
-  #mid이 target보다 크거나 같으면 왼쪽 탐색
-  elif target <= arr[mid]:
+  # mid이 target보다 크거나 같으면 왼쪽 탐색
+  elif target <= arr[mid]: # 왜 같거나지?
     return first(arr,target,start,mid-1)
   else:
     return first(arr,target,mid+1,end)
